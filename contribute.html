@@ -1,139 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>The H.O.R.I.Z.O.N - Contribute</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Rajdhani&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The H.O.R.I.Z.O.N — Contribution Board</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Rajdhani&display=swap');
 
-  * {
-    margin: 0; padding: 0; box-sizing: border-box;
-  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  body {
-    background: radial-gradient(ellipse at center, #0a0a14 0%, #000000 80%);
-    color: #cfdcff;
-    font-family: 'Rajdhani', sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
+    body {
+      background: radial-gradient(ellipse at center, #0a0a14 0%, #000000 90%);
+      color: #cfdcff;
+      font-family: 'Rajdhani', sans-serif;
+      padding: 2rem;
+    }
 
-  header {
-    padding: 2rem 3rem;
-    border-bottom: 1px solid #2e2e5c;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  header h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 500;
-    font-size: 1.8rem;
-    letter-spacing: 0.15em;
-    color: #81a1ff;
-  }
-
-  nav a {
-    color: #81a1ff;
-    text-decoration: none;
-    margin-left: 2rem;
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
-  nav a:hover {
-    color: #aabfff;
-  }
-
-  main {
-    flex-grow: 1;
-    padding: 3rem;
-    max-width: 960px;
-    margin: 0 auto;
-  }
-
-  main h2 {
-    font-family: 'Orbitron', sans-serif;
-    color: #88c0d0;
-    font-weight: 500;
-    margin-bottom: 1rem;
-    letter-spacing: 0.1em;
-    border-bottom: 1px solid #2e2e5c;
-    padding-bottom: 0.5rem;
-  }
-
-  section {
-    margin-bottom: 3rem;
-  }
-
-  p {
-    line-height: 1.5;
-    color: #d8dee9cc;
-    font-size: 1.1rem;
-  }
-
-  a.github-link {
-    color: #81a1ff;
-    font-weight: 700;
-    text-decoration: none;
-  }
-  a.github-link:hover {
-    color: #aabfff;
-  }
-
-  footer {
-    text-align: center;
-    padding: 1.5rem 0;
-    color: #555a88;
-    font-size: 0.9rem;
-    border-top: 1px solid #2e2e5c;
-  }
-
-  /* Responsive */
-  @media (max-width: 700px) {
     header {
-      flex-direction: column;
-      align-items: flex-start;
+      text-align: center;
+      margin-bottom: 2rem;
     }
-    nav {
-      margin-top: 1rem;
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      color: #81a1ff;
+      letter-spacing: 0.15em;
+      font-size: 2rem;
     }
-    nav a {
-      margin-left: 0;
-      margin-right: 1.5rem;
+
+    header p {
+      margin-top: 0.5rem;
+      color: #9daacc;
+      font-size: 1.1rem;
     }
-  }
-</style>
+
+    .category {
+      margin-bottom: 3rem;
+    }
+
+    .category h2 {
+      font-family: 'Orbitron', sans-serif;
+      color: #88c0d0;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #2e2e5c;
+      padding-bottom: 0.3rem;
+      letter-spacing: 0.05em;
+    }
+
+    .job-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .job {
+      background: rgba(30, 30, 55, 0.9);
+      border-radius: 10px;
+      padding: 1.2rem;
+      box-shadow: 0 0 12px #4456a3;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .job:hover {
+      box-shadow: 0 0 20px #6f92ff;
+    }
+
+    .job h3 {
+      color: #a3bef0;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .job p {
+      color: #c2c6e5;
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .job .credits {
+      color: #b3ffb3;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding-top: 2rem;
+      color: #555a88;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-<header>
-  <h1>THE H.O.R.I.Z.O.N</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="wiki.html">Archive</a>
-    <a href="news.html">Transmissions</a>
-    <a href="contribute.html">Contribute</a>
-  </nav>
-</header>
+  <header>
+    <h1>Contribution Board</h1>
+    <p>All citizens are encouraged to contribute to the survival, prosperity, and future of The H.O.R.I.Z.O.N.</p>
+    <p>Multiple contributors may complete any given task. Unity is strength.</p>
+  </header>
 
-<main>
-  <section>
-    <h2>Contributing to the Archive</h2>
-    <p>Welcome, citizen. The archive thrives because of contributions from those who walk the Path. To maintain the integrity and mystery of The H.O.R.I.Z.O.N, contributions follow a careful review process.</p>
-    <p>Here’s how you can help:</p>
-    <ul>
-      <li>Fork the repository on <a class="github-link" href="https://github.com/echo-001-a/The-H.O.R.I.Z.O.N" target="_blank" rel="noopener">GitHub</a>.</li>
-      <li>Make edits or add new pages within the designated folders.</li>
-      <li>Submit a pull request with a detailed description of your additions or changes.</li>
-    </ul>
-    <p>For detailed guidelines, formatting help, and lore references, see the <a href="wiki.html">Archive Index</a>.</p>
+  <section class="category">
+    <h2>Resource Acquisition</h2>
+    <div class="job-list">
+      <div class="job">
+        <h3>Collect Iron</h3>
+        <p>Deliver 64 iron ingots to central storage.</p>
+        <p class="credits">+10 Credits</p>
+      </div>
+      <div class="job">
+        <h3>Collect Diamonds</h3>
+        <p>Deliver 32 diamonds to central storage.</p>
+        <p class="credits">+40 Credits</p>
+      </div>
+      <div class="job">
+        <h3>Collect Netherite</h3>
+        <p>Deliver 1 Netherite ingot to command vaults.</p>
+        <p class="credits">+60 Credits</p>
+      </div>
+    </div>
   </section>
-</main>
 
-<footer>
-  &copy; 2025 The H.O.R.I.Z.O.N | Eternal Vigilance at the Event Horizon
-</footer>
+  <section class="category">
+    <h2>Engineering & Construction</h2>
+    <div class="job-list">
+      <div class="job">
+        <h3>Facility Expansion</h3>
+        <p>Assist in constructing key structures based on official schematics.</p>
+        <p class="credits">+100 Credits</p>
+      </div>
+      <div class="job">
+        <h3>Redstone Systems</h3>
+        <p>Design and contribute functional redstone or mechanical systems.</p>
+        <p class="credits">+40–80 Credits</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="category">
+    <h2>Recon & Exploration</h2>
+    <div class="job-list">
+      <div class="job">
+        <h3>Survey New Zones</h3>
+        <p>Map and report terrain, threats, and opportunities.</p>
+        <p class="credits">+25 Credits</p>
+      </div>
+      <div class="job">
+        <h3>Locate Rare Resources</h3>
+        <p>Document ore veins, structures, or anomalies.</p>
+        <p class="credits">+15–40 Credits</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="category">
+    <h2>Data & Archives</h2>
+    <div class="job-list">
+      <div class="job">
+        <h3>Create Official Logs</h3>
+        <p>Contribute entries to the public archives: reports, stories, or recovered data.</p>
+        <p class="credits">+50–100 Credits</p>
+      </div>
+      <div class="job">
+        <h3>Decode Lost Files</h3>
+        <p>Transcribe, restore, or analyze corrupted Horizon documents.</p>
+        <p class="credits">+30–60 Credits</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="category">
+    <h2>Communications</h2>
+    <div class="job-list">
+      <div class="job">
+        <h3>Create Citizen Messaging</h3>
+        <p>Design visual/audio content that uplifts Horizon’s mission and morale.</p>
+        <p class="credits">+50–200 Credits</p>
+      </div>
+      <div class="job">
+        <h3>Transmit Approved Broadcasts</h3>
+        <p>Share Horizon announcements and transmissions via approved networks.</p>
+        <p class="credits">+20–50 Credits</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 The H.O.R.I.Z.O.N — Loyalty is eternal. All tasks logged.
+  </footer>
 </body>
 </html>
