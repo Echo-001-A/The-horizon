@@ -75,7 +75,142 @@
   </style>
 </head>
 <body>
-  <header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The H.O.R.I.Z.O.N. - Home</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Rajdhani&display=swap');
+
+  /* Reset */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+
+  body {
+    background: radial-gradient(ellipse at center, #0a0a14 0%, #000000 80%);
+    color: #cfdcff;
+    font-family: 'Rajdhani', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    padding: 2rem 3rem;
+    border-bottom: 1px solid #2e2e5c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: 0.15em;
+    color: #81a1ff;
+  }
+
+  nav a {
+    color: #81a1ff;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #aabfff;
+  }
+
+  main {
+    flex-grow: 1;
+    padding: 3rem;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  main h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #88c0d0;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid #2e2e5c;
+    padding-bottom: 0.5rem;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  p {
+    line-height: 1.5;
+    color: #d8dee9cc;
+    font-size: 1.1rem;
+  }
+
+  /* News cards */
+  .news-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .news-item {
+    background: rgba(30, 30, 55, 0.8);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #4c6ef5;
+    transition: box-shadow 0.3s ease;
+  }
+  .news-item:hover {
+    box-shadow: 0 0 25px #81a1ff;
+  }
+
+  .news-item h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #a3bef0;
+  }
+
+  .news-item time {
+    font-size: 0.85rem;
+    color: #7f8db0;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    color: #555a88;
+    font-size: 0.9rem;
+    border-top: 1px solid #2e2e5c;
+  }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    .news-list {
+      grid-template-columns: 1fr;
+    }
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      margin-left: 0;
+      margin-right: 1.5rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
   <h1>THE H.O.R.I.Z.O.N</h1>
   <nav>
     <a href="index.html">Home</a>
@@ -84,7 +219,7 @@
     <a href="contribute.html">Contribute</a>
     <a href="taxes.html">Taxes</a>
   </nav>
-  </header>
+</header>
   <header>
     <h1>THE H.O.R.I.Z.O.N</h1>
     <p>Taxation and Credit Redistribution System</p>
